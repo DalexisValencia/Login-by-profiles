@@ -134,7 +134,7 @@ class _SelectedTypeLoginState extends State<SelectedTypeLogin> {
     setState(() {
       widgetOwnAnimation = widget.stateAnimation;
     });
-    Timer(Duration(milliseconds:4000), (){
+    Timer(Duration(milliseconds:500), (){
       startAnimation();
     });
   }
@@ -145,7 +145,6 @@ class _SelectedTypeLoginState extends State<SelectedTypeLogin> {
   }
 
   setActiveButton(number){
-     print(number);
     setState(() {
       active = number;
     });
@@ -263,7 +262,7 @@ class _RegisterFormState extends State<RegisterForm> {
     setState(() {
        stateAnimationForm = widget.stateAnimation;
     });
-    Timer(Duration(milliseconds:4000), (){
+    Timer(Duration(milliseconds:500), (){
       startEasyAnimation();
     });
   }
