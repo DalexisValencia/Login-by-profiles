@@ -1,6 +1,25 @@
-# fourth_test_app
+<img src="https://github.com/DalexisValencia/logos-for-readme/blob/main/flutter/flutter-dart-830.png" alt="drawing" width="450"/>
 
-A new Flutter project.
+# Login By Profiles
+
+This app is a login screen divided in two sections, each section is animated from a screen location opposite.
+
+## Section 1: User profile selected 
+In this app exists three different users profiles (Parent, Student, Teacher).
+When a profile is clicked, its size increase with an animation.
+
+
+## Section 2: Form 
+Each form field is validate when the signup button is clicked.
+Some form fields has a special validation like email field or the password fields.
+
+## Preview:
+
+![Alt Text](https://github.com/DalexisValencia/fourth_test_app/blob/master/video/Screenrecorder-2020-12-14-16-16-46-422.gif)
+
+
+**Is the gif in bad quality? i invite you to visit [this link](https://youtu.be/_ir4GEs3RXE)**
+
 
 ## Getting Started
 
