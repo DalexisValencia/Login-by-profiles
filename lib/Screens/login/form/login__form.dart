@@ -80,27 +80,27 @@ class _RegisterFormState extends State<RegisterForm> {
   validateForm() {
     // Valida los campos del formulario
     if (username.text == '' || username.text == null) {
-      showSnackBar('Ingresa un usuario');
+      showSnackBar('Insert an user');
       return;
     }
 
     if (usermail.text == '' || usermail.text == null) {
-      showSnackBar('Ingresa un email');
+      showSnackBar('Insert an email');
       return;
     }
 
     if (userPass1.text == '' || userPass1.text == null) {
-      showSnackBar('Ingresa una contraseña');
+      showSnackBar('Insert a password');
       return;
     }
 
     if (userPass2.text == '' || userPass2.text == null) {
-      showSnackBar('Por favor valida tu contraseña');
+      showSnackBar('Please valid your password');
       return;
     }
 
     if (userPass1.text != userPass2.text) {
-      showSnackBar('Las dos contraseña deben coincidir');
+      showSnackBar('The passwords do not match');
       return;
     }
 
@@ -205,13 +205,13 @@ class _RegisterFormState extends State<RegisterForm> {
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                       gradient: LinearGradient(
-
-                          // colors: [
-                          //   Theme.of(context).hoverColor,
-                          //   Theme.of(context).accentColor
-                          // ],
-                          begin: Alignment.centerRight,
-                          end: Alignment.centerLeft),
+                        colors: [
+                          Theme.of(context).hoverColor,
+                          Theme.of(context).accentColor
+                        ],
+                        begin: Alignment.centerRight,
+                        end: Alignment.centerLeft,
+                      ),
                       borderRadius: BorderRadius.circular(50)),
                   child: RaisedButton(
                     padding: EdgeInsets.all(15),
