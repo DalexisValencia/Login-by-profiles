@@ -6,11 +6,13 @@ This app is a login screen divided in two sections, each section is animated fro
 
 ## Section 1: User profile selected 
 In this app exists three different users profiles (Parent, Student, Teacher).
+
 When a profile is clicked, its size increase with an animation.
 
 
 ## Section 2: Form 
 Each form field is validate when the signup button is clicked.
+
 Some form fields has a special validation like email field or the password fields.
 
 ## Preview:
@@ -20,6 +22,12 @@ Some form fields has a special validation like email field or the password field
 
 **Is the gif in bad quality? i invite you to visit [this link](https://youtu.be/_ir4GEs3RXE)**
 
+## Technical Details:
+
+```
+Flutter version 1.22.3
+Dart version 2.10.3
+```
 
 ## Getting Started
 
