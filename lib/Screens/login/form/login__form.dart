@@ -111,7 +111,7 @@ class _RegisterFormState extends State<RegisterForm> {
       return;
     }
 
-    showSnackBar("all it's ok", true);
+    showSnackBar("All it's ok", true);
 
     setState(() {
       disabeledFinal = false;
@@ -121,13 +121,13 @@ class _RegisterFormState extends State<RegisterForm> {
   showSnackBar(text, success) {
     Scaffold.of(context).showSnackBar(
       SnackBar(
-        backgroundColor: Theme.of(context).hoverColor,
+        backgroundColor: !success
+            ? Theme.of(context).hoverColor
+            : Theme.of(context).primaryColorLight,
         content: Text(
           text,
           style: Theme.of(context).textTheme.headline6.copyWith(
-                color: !success
-                    ? Theme.of(context).textSelectionColor
-                    : Theme.of(context).primaryColorLight,
+                color: Theme.of(context).textSelectionColor,
                 fontSize: 12,
               ),
         ),
