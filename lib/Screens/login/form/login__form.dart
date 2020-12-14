@@ -80,43 +80,54 @@ class _RegisterFormState extends State<RegisterForm> {
   validateForm() {
     // Valida los campos del formulario
     if (username.text == '' || username.text == null) {
-      showSnackBar('Insert an user');
+      showSnackBar('Insert an user', false);
       return;
     }
-
     if (usermail.text == '' || usermail.text == null) {
-      showSnackBar('Insert an email');
+      showSnackBar('Insert an email', false);
       return;
+    } else {
+      bool emailValid = RegExp(
+              r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+          .hasMatch(usermail.text);
+      if (!emailValid) {
+        showSnackBar('Insert a valid email', false);
+        return;
+      }
     }
 
     if (userPass1.text == '' || userPass1.text == null) {
-      showSnackBar('Insert a password');
+      showSnackBar('Insert a password', false);
       return;
     }
 
     if (userPass2.text == '' || userPass2.text == null) {
-      showSnackBar('Please valid your password');
+      showSnackBar('Please valid your password', false);
       return;
     }
 
     if (userPass1.text != userPass2.text) {
-      showSnackBar('The passwords do not match');
+      showSnackBar('The passwords do not match', false);
       return;
     }
+
+    showSnackBar("all it's ok", true);
 
     setState(() {
       disabeledFinal = false;
     });
   }
 
-  showSnackBar(text) {
+  showSnackBar(text, success) {
     Scaffold.of(context).showSnackBar(
       SnackBar(
         backgroundColor: Theme.of(context).hoverColor,
         content: Text(
           text,
           style: Theme.of(context).textTheme.headline6.copyWith(
-                color: Theme.of(context).textSelectionColor,
+                color: !success
+                    ? Theme.of(context).textSelectionColor
+                    : Theme.of(context).primaryColorLight,
                 fontSize: 12,
               ),
         ),
